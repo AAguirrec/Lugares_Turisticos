@@ -1,0 +1,183 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "@ionic/angular/css/normalize.css";
+@import "@ionic/angular/css/structure.css";
+@import "@ionic/angular/css/typography.css";
+@import "@ionic/angular/css/display.css";
+
+/* Optional CSS utils that can be commented out */
+@import "@ionic/angular/css/padding.css";
+@import "@ionic/angular/css/float-elements.css";
+@import "@ionic/angular/css/text-alignment.css";
+@import "@ionic/angular/css/text-transformation.css";
+@import "@ionic/angular/css/flex-utils.css";
+
+/**
+ * Ionic Dark Mode
+ * -----------------------------------------------------
+ * For more info, please see:
+ * https://ionicframework.com/docs/theming/dark-mode
+ */
+
+/* @import "@ionic/angular/css/palettes/dark.always.css"; */
+/* @import "@ionic/angular/css/palettes/dark.class.css"; */
+/* Tema oscuro propio definido más abajo */
+
+/* ------------------------------------------------------------------ */
+/* Tema "Lugares Turísticos": oscuro con verdes, mint y naranja        */
+/* ------------------------------------------------------------------ */
+:root {
+  --app-bg: #0f1d16;
+  --app-card: #162c22;
+  --app-border: #34473e;
+  --app-green: #46b689;
+  --app-orange: #e9a73f;
+  --app-mint: #91c6b2;
+  --app-muted: #b3c9bd;
+  --app-serif: 'Fraunces', Georgia, serif;
+
+  --ion-font-family: 'Inter', system-ui, sans-serif;
+  --ion-background-color: var(--app-bg);
+  --ion-text-color: #eaf3ee;
+  --ion-color-primary: #46b689;
+  --ion-color-primary-contrast: #ffffff;
+  --ion-color-danger: #ef6a5e;
+  --ion-color-danger-contrast: #ffffff;
+}
+
+body,
+ion-content {
+  --background: var(--app-bg);
+}
+
+/* Botones */
+ion-button {
+  --border-radius: 12px;
+  text-transform: none;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+ion-button.boton-principal {
+  --background: var(--app-green);
+  --background-activated: #3aa27a;
+  --color: #ffffff;
+  --box-shadow: none;
+  font-size: 16px;
+  height: 48px;
+}
+
+ion-button.boton-secundario {
+  --border-color: var(--app-green);
+  --color: var(--app-green);
+  --border-radius: 12px;
+  font-size: 16px;
+  height: 48px;
+}
+
+/* Campos de texto */
+ion-input.campo,
+ion-textarea.campo,
+ion-select.campo {
+  --background: #0f1d16;
+  --color: #f2f7f4;
+  --placeholder-color: #6f877b;
+  --placeholder-opacity: 1;
+  --padding-start: 14px;
+  --padding-end: 14px;
+  --padding-top: 12px;
+  --padding-bottom: 12px;
+  min-height: 48px;
+  border: 1px solid #2b4237;
+  border-radius: 12px;
+  background: #0f1d16;
+  font-size: 15px;
+  transition: border-color 0.15s;
+}
+
+ion-input.campo,
+ion-textarea.campo {
+  --highlight-color-focused: transparent;
+  --highlight-color-valid: transparent;
+  --highlight-color-invalid: transparent;
+}
+
+ion-input.campo.has-focus,
+ion-textarea.campo.has-focus,
+ion-select.campo.select-expanded {
+  border: 2px solid var(--app-orange);
+}
+
+ion-select.campo::part(icon) {
+  opacity: 0.7;
+}
+
+ion-select.campo::part(text) {
+  padding-left: 0;
+}
+
+/* Alertas */
+ion-alert {
+  --background: #15281f;
+  --max-width: 330px;
+  --ion-text-color: #eaf3ee;
+  --ion-color-step-150: #34473e;
+  --ion-color-step-850: #b3c9bd;
+  --backdrop-opacity: 0.6;
+
+  .alert-wrapper {
+    border-radius: 16px;
+    border: 1px solid var(--app-border);
+  }
+
+  .alert-title {
+    font-size: 17px;
+    font-weight: 700;
+    color: #f2f7f4;
+  }
+
+  .alert-message {
+    font-size: 14px;
+    color: var(--app-muted);
+  }
+
+  .alert-button {
+    color: var(--app-green);
+    font-weight: 600;
+    font-size: 15px;
+    text-transform: none;
+    margin: 0;
+  }
+
+  .alert-button-inner {
+    justify-content: center;
+  }
+
+  .alert-button.alert-button-role-destructive {
+    color: var(--ion-color-danger);
+  }
+
+  .alert-button-group {
+    justify-content: center;
+    border-top: 1px solid var(--app-border);
+    padding: 4px 8px;
+  }
+}
+
+ion-popover {
+  --background: #15281f;
+  --box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}

@@ -1,0 +1,90 @@
+.encabezado {
+  background: var(--app-green);
+  padding: calc(var(--ion-safe-area-top, 0px) + 20px) 20px 16px;
+  color: #f1fff8;
+
+  h1 {
+    margin: 0;
+    font-family: var(--app-serif);
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  p {
+    margin: 4px 0 0;
+    font-size: 13px;
+    opacity: 0.9;
+  }
+}
+
+.contenido {
+  padding: 16px 16px 24px;
+}
+
+.seccion {
+  margin: 8px 4px 10px;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--app-muted);
+}
+
+.tarjeta {
+  background: var(--app-card);
+  border: 1px solid var(--app-border);
+  border-radius: 16px;
+  padding: 16px;
+  margin-bottom: 26px;
+
+  .ayuda {
+    margin: 0 0 16px;
+    font-size: 14px;
+    line-height: 1.45;
+    color: #dbe8e1;
+  }
+
+  label {
+    display: block;
+    margin: 0 0 8px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #dbe8e1;
+  }
+
+  .campo {
+    margin-bottom: 16px;
+  }
+}
+
+.botones {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 4px;
+
+  ion-button {
+    margin: 0;
+  }
+}
+
+.lista {
+  list-style: none;
+  margin: 0 0 14px;
+  padding: 0;
+  display: grid;
+  gap: 12px;
+}
+
+.boton-eliminar {
+  --border-radius: 8px;
+  --border-width: 1px;
+  margin: 0;
+  font-weight: 600;
+  text-transform: none;
+}
+
+.cerrar {
+  font-weight: 700;
+  text-transform: none;
+}

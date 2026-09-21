@@ -1,0 +1,57 @@
+ion-toolbar {
+  --background: var(--app-green);
+  --color: #f1fff8;
+  --border-width: 0;
+}
+
+ion-title {
+  font-family: var(--app-serif);
+  font-size: 17px;
+  font-weight: 700;
+}
+
+ion-back-button {
+  --color: #f1fff8;
+}
+
+.formulario {
+  padding: 40px 20px 24px;
+
+  h1 {
+    margin: 0 0 6px;
+    font-family: var(--app-serif);
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--app-green);
+  }
+
+  .ayuda {
+    margin: 0 0 26px;
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--app-muted);
+
+    strong {
+      color: #f2f7f4;
+    }
+  }
+
+  label {
+    display: block;
+    margin: 0 0 8px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #dbe8e1;
+  }
+
+  .campo {
+    --background: #162c22;
+    background: #162c22;
+    border-color: #223a2f;
+    margin-bottom: 20px;
+  }
+
+  .boton-principal {
+    margin-top: 26px;
+  }
+}

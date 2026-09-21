@@ -1,0 +1,28 @@
+<ion-header [translucent]="false">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home" text="" icon="chevron-back-outline"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Inicio de sesión</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form class="formulario" (ngSubmit)="ingresar()">
+    <h1>Bienvenido</h1>
+    <p class="ayuda">
+      Ingresa con tu cuenta de administrador para gestionar los lugares turísticos.
+      (Usuario de prueba: <strong>admin</strong> / Contraseña: <strong>1234</strong>)
+    </p>
+
+    <label for="usuario">Usuario</label>
+    <ion-input id="usuario" class="campo" name="usuario" type="text" placeholder="admin"
+               autocomplete="username" [(ngModel)]="usuario"></ion-input>
+
+    <label for="clave">Contraseña</label>
+    <ion-input id="clave" class="campo" name="clave" type="password" placeholder="••••"
+               autocomplete="current-password" [(ngModel)]="clave"></ion-input>
+
+    <ion-button type="submit" expand="block" class="boton-principal">Ingresar</ion-button>
+  </form>
+</ion-content>

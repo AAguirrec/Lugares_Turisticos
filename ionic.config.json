@@ -1,0 +1,7 @@
+{
+  "name": "lugares-turisticos",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

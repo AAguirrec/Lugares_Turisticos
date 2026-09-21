@@ -1,0 +1,34 @@
+<article class="lugar">
+  <div class="fila">
+    <div class="icono" [class.mint]="alterno">
+      <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor"
+           stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"
+           [ngSwitch]="lugar.icono">
+        <ng-container *ngSwitchCase="'costa'">
+          <path d="M12 10V4M9 7l3-3 3 3"/>
+          <path d="M5 14c1.5-1.5 3 1.5 4.5 0s3 1.5 4.5 0 3 1.5 4.5 0"/>
+          <path d="M5 18c1.5-1.5 3 1.5 4.5 0s3 1.5 4.5 0 3 1.5 4.5 0"/>
+        </ng-container>
+        <path *ngSwitchCase="'montana'" d="M4 16l4-7 3.5 5 3-7 3.5 9"/>
+        <ng-container *ngSwitchCase="'rio'">
+          <path d="M4 8c2-2 3 2 5 0s3 2 5 0 3 2 5 0"/>
+          <path d="M4 12c2-2 3 2 5 0s3 2 5 0 3 2 5 0"/>
+          <path d="M4 16c2-2 3 2 5 0s3 2 5 0 3 2 5 0"/>
+        </ng-container>
+        <ng-container *ngSwitchCase="'arqueologico'">
+          <path d="M12 4l8 15H4z"/>
+          <circle cx="12" cy="14" r="2"/>
+        </ng-container>
+        <ng-container *ngSwitchCase="'isla'">
+          <circle cx="12" cy="12" r="3"/>
+          <path d="M12 4v3M12 17v3M4 12h3M17 12h3"/>
+        </ng-container>
+      </svg>
+    </div>
+    <div class="texto">
+      <h3>{{ lugar.nombre }}</h3>
+      <p>{{ lugar.descripcion }}</p>
+    </div>
+  </div>
+  <div class="acciones"><ng-content></ng-content></div>
+</article>

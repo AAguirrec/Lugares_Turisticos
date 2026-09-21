@@ -1,0 +1,48 @@
+.encabezado {
+  background: var(--app-green);
+  padding: calc(var(--ion-safe-area-top, 0px) + 22px) 20px 22px;
+
+  h1 {
+    margin: 0;
+    font-family: var(--app-serif);
+    font-size: 24px;
+    line-height: 1.25;
+    font-weight: 700;
+    color: #f1fff8;
+  }
+}
+
+.contenido {
+  padding: 16px 16px 24px;
+}
+
+.hero {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 14px;
+}
+
+.descripcion {
+  margin: 16px 4px 22px;
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--app-muted);
+}
+
+.seccion {
+  margin: 0 4px 10px;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--app-muted);
+}
+
+.lista {
+  list-style: none;
+  margin: 0 0 18px;
+  padding: 0;
+  display: grid;
+  gap: 12px;
+}

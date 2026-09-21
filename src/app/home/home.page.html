@@ -1,0 +1,33 @@
+<ion-content [fullscreen]="true">
+  <header class="encabezado">
+    <h1>{{ titulo }}</h1>
+  </header>
+
+  <main class="contenido">
+    <svg class="hero" viewBox="0 0 320 120" preserveAspectRatio="xMidYMid slice" role="img"
+         aria-label="Ilustración de montañas de Colombia">
+      <rect width="320" height="120" rx="14" fill="#3fae86"/>
+      <circle cx="262" cy="34" r="17" fill="#e9a73f"/>
+      <path d="M0 120V84l52-44 46 40 52-56 60 66 40-32 70 42v20z" fill="#5dc79c" opacity=".55"/>
+      <path d="M0 120V96l60-38 50 42 56-50 64 54 40-24 50 40z" fill="#46b689"/>
+      <path d="M0 120v-14l70-30 60 34 70-40 60 30 60-12v32z" fill="#2f8f6b"/>
+    </svg>
+
+    <p class="descripcion">
+      Guía interactiva para descubrir y administrar los lugares turísticos más
+      representativos de Colombia: desde el Caribe hasta la Amazonia.
+    </p>
+
+    <h2 class="seccion">Lugares destacados</h2>
+
+    <ul class="lista">
+      <li *ngFor="let lugar of lugares; let i = index">
+        <app-lugar-item [lugar]="lugar" [alterno]="i % 2 === 1"></app-lugar-item>
+      </li>
+    </ul>
+
+    <ion-button expand="block" class="boton-principal" (click)="irALogin()">
+      Iniciar sesión
+    </ion-button>
+  </main>
+</ion-content>

@@ -1,0 +1,53 @@
+<ion-content [fullscreen]="true">
+  <header class="encabezado">
+    <h1>Panel de administración</h1>
+    <p>Gestión de lugares turísticos</p>
+  </header>
+
+  <main class="contenido">
+    <h2 class="seccion">Agregar nuevo lugar</h2>
+
+    <form class="tarjeta" (ngSubmit)="agregarLugar()">
+      <p class="ayuda">Completa los datos para registrar un nuevo sitio en el listado.</p>
+
+      <label for="nombre">Nombre del lugar</label>
+      <ion-input id="nombre" class="campo" name="nombre" placeholder="Ej: Parque Tayrona"
+                 [(ngModel)]="nombre"></ion-input>
+
+      <label for="descripcion">Descripción breve</label>
+      <ion-textarea id="descripcion" class="campo" name="descripcion" [autoGrow]="true" rows="2"
+                    placeholder="Ej: Parque natural con playas y selva sobre el Caribe."
+                    [(ngModel)]="descripcion"></ion-textarea>
+
+      <label for="categoria">Categoría</label>
+      <ion-select id="categoria" class="campo" name="categoria" interface="popover"
+                  toggleIcon="chevron-down-outline" [(ngModel)]="categoria">
+        <ion-select-option *ngFor="let c of categorias" [value]="c">{{ c }}</ion-select-option>
+      </ion-select>
+
+      <div class="botones">
+        <ion-button type="button" fill="outline" class="boton-secundario" (click)="limpiar()">
+          Limpiar
+        </ion-button>
+        <ion-button type="submit" class="boton-principal">Guardar lugar</ion-button>
+      </div>
+    </form>
+
+    <h2 class="seccion">Registros actuales</h2>
+
+    <ul class="lista">
+      <li *ngFor="let lugar of lugares; let i = index">
+        <app-lugar-item [lugar]="lugar" [alterno]="i % 2 === 1">
+          <ion-button size="small" fill="outline" color="danger" class="boton-eliminar"
+                      (click)="confirmarEliminar(lugar)">
+            Eliminar
+          </ion-button>
+        </app-lugar-item>
+      </li>
+    </ul>
+
+    <ion-button fill="clear" color="danger" expand="block" class="cerrar" (click)="cerrarSesion()">
+      Cerrar sesión
+    </ion-button>
+  </main>
+</ion-content>
